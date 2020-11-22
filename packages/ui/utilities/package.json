@@ -1,0 +1,19 @@
+{
+  "name": "@legocss/utilities",
+  "version": "0.0.3",
+  "description": "The package for mixins, etc for LegoCSS",
+  "main": "index.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "morgantaylor",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/morgantaylor/legocss.git"
+  },
+  "homepage": "https://github.com/morgantaylor/legocss#readme",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  }
+}

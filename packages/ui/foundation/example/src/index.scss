@@ -1,0 +1,7 @@
+@import '@legocss/utilities/_mixins.scss';
+
+// show how to use mixins from the utilities package
+
+.test-custom {
+	@include text(var(--type-scale-headline), 1.25, 600, var(--color-primary))
+}

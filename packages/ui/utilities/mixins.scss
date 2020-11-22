@@ -1,0 +1,135 @@
+// ==================
+// Mixins
+// ==================
+
+
+// Button Mixin //
+
+@mixin button-states($btn-type, $color, $background: null, $border: null) {
+  &:disabled {
+    &:hover {
+      background-color: $background;
+      color: $color;
+      border: 1px solid $border;
+    }
+  }
+
+  &[aria-disabled="true"] {
+    &:hover {
+      color: $color;
+    }
+  }
+
+  &:hover {
+    @if $btn-type == 'btn' {
+      color: $color;
+      background-color: darken($background, 10%);
+      border-color: darken($border, 12%);
+    } @else if $btn-type == 'btn-outline' {
+      color: $background;
+      background-color: $color;
+      border-color: darken($border, 12%);
+    } @else if $btn-type == 'link' {
+      color: darken($color, 15%);
+    } @else {
+      @error "#{$btn-type} is an unknown type of button.";
+    }
+  }
+
+  // can put in .active and .selected states later
+  &.active,
+  &.active:hover {
+    @if $btn-type == 'btn' {
+      color: $color;
+      background-color: darken($border, 20%);
+      border-color: darken($border, 20%);
+    } @else if $btn-type == 'btn-outline' {
+      color: $background;
+      background-color: darken($border, 20%);
+      border-color: darken($border, 20%);
+    }
+  }
+}
+
+@mixin custom-skin($type, $background: null, $color: null, $border: null) {
+  @if $type == 'link' {
+    color: $color;
+  } @else {
+    background-color: $background;
+    color: $color;
+    border: 1px solid $border;
+  }
+
+  @if $type == 'btn' {
+    @include button-states('btn', $color, $background, $border);
+  }
+
+  @if $type == 'btn-outline' {
+    @include button-states('btn-outline', $color, $background, $border);
+  }
+
+  @if $type == 'link' {
+    @include button-states('link', $color);
+  }
+}
+
+// This skin doesn't need different states, just color
+@mixin skin($main, $secondary, $tertiary: null) {
+  color: $secondary;
+  background-color: $main;
+  border-color: $tertiary;
+}
+
+// Text Mixin //
+
+@mixin text($size: null, $height: null, $weight: null, $color: null) {
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+  color: $color;
+}
+
+// Responsive Font Sizes //
+@mixin font-size($fs-map) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null { // default
+      font-size: $fs-font-size;
+    }
+    @else if $fs-breakpoint == 'phone' {
+      font-size: $fs-font-size;
+    }
+    @else if $fs-breakpoint == 'tablet' {
+      @media screen and (min-width: 600px) and (max-width: 1024px) {
+        font-size: $fs-font-size;
+      }
+    }
+    @else if $fs-breakpoint == 'desktop' {
+      @media screen and (min-width: 1025px) {
+        font-size: $fs-font-size;
+      }
+    }
+  }
+}
+
+// Transform 
+// Ex: @include transform(translateY, 10px);
+@mixin transform($transforms) {
+  transform: $transforms;
+}
+
+// Box Shadow 
+// Ex: box-shadow(2px, 2px, 6px, rgba(0, 0, 0, 0.28));
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    box-shadow: inset $top $left $blur $color;
+  } @else {
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+// This is the old mixin for transitions,
+// going to need to trasition theses
+@mixin transition($var...) {
+  transition: $var;
+}
+
