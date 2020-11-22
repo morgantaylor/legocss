@@ -1,7 +1,5 @@
 # @legocss/foundation
 
-> Made with create-react-library
-
 [![NPM](https://img.shields.io/npm/v/@legocss/foundation.svg)](https://www.npmjs.com/package/@legocss/foundation) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
@@ -14,6 +12,7 @@ npm i --save @legocss/foundation
 
 This package contains the foundation styles of the LegoCSS library, including:
 - Colors
+- Font
 - Type-scale
 - Typography
 
@@ -21,14 +20,14 @@ This package contains the foundation styles of the LegoCSS library, including:
 
 MIT © [morgantaylor](https://github.com/morgantaylor)
 
-## Dev
+## Development
 
-To compile to the dist folder:
+To compile css to the dist folder - dev:
 ```bash
-npm start
+npm run dev
 ```
 
-To test the package navigate to /example folder:
+To compile css to the dist folder - product:
 ```bash
-npm start
+npm run package
 ```

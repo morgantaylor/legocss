@@ -16,6 +16,18 @@ To use the mixins in your SCSS import the file inside of you scss file
 @import '@legocss/utilities/mixins.scss';
 ```
 
+## Development
+
+To compile css to the dist folder - dev:
+```bash
+npm run dev
+```
+
+To compile css to the dist folder - product:
+```bash
+npm run package
+```
+
 ## License
 
 MIT © [morgantaylor](https://github.com/morgantaylor)

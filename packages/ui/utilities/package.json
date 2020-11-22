@@ -1,6 +1,6 @@
 {
   "name": "@legocss/utilities",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "The package for mixins, etc for LegoCSS",
   "main": "index.scss",
   "scripts": {
@@ -12,8 +12,5 @@
     "type": "git",
     "url": "git+https://github.com/morgantaylor/legocss.git"
   },
-  "homepage": "https://github.com/morgantaylor/legocss#readme",
-  "dependencies": {
-    "node-sass": "^4.14.1"
-  }
+  "homepage": "https://github.com/morgantaylor/legocss#readme"
 }

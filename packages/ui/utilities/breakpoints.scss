@@ -2,8 +2,12 @@
 // Breakpoints
 // ==================
 
+// Example
+// @media #{$phone} {
+//	 ...
+// }
 
-// for media queries throughout
+
 $phone: '(max-width: 599px)';
 $phone-up: '(min-width: 600px)';
 $tablet: '(min-width: 600px) and (max-width: 1024px)';

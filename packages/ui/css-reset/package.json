@@ -1,14 +1,7 @@
 {
-  "name": "@legocss/foundation",
-  "version": "0.0.7",
-  "description": "LegoCSS foundation package",
-  "author": "morgantaylor",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/morgantaylor/legocss.git"
-  },
-  "homepage": "https://github.com/morgantaylor/legocss#readme",
+  "name": "@legocss/css-reset",
+  "version": "0.0.1",
+  "description": "LegoCSS package for resetting browser CSS",
   "files": [
     "/dist"
   ],
@@ -18,11 +11,19 @@
     "package": "node-sass --output-style compressed --source-map-embed src/index.scss dist/index.css && postcss -u autoprefixer -r dist/index.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "author": "morgantaylor",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/morgantaylor/legocss.git"
+  },
+  "homepage": "https://github.com/morgantaylor/legocss#readme",
   "devDependencies": {
-    "@legocss/utilities": "^0.0.4",
+    "@legocss/foundation": "0.0.7",
+    "@legocss/utilities": "0.0.4",
     "autoprefixer": "^10.0.2",
+    "node-sass": "4.14.1",
     "postcss": "^8.1.9",
-    "postcss-cli": "^8.3.0",
-    "node-sass": "4.14.1"
+    "postcss-cli": "^8.3.0"
   }
 }
