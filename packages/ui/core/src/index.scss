@@ -1,4 +1,4 @@
 @import '~@legocss/utilities/_mixins.scss';
 @import '~@legocss/utilities/_breakpoints.scss';
-@import 'normalize';
-@import 'reset'
+@import "~@legocss/css-reset";
+@import "~@legocss/foundation";
