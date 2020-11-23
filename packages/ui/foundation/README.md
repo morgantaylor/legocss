@@ -8,17 +8,27 @@
 npm i --save @legocss/foundation
 ```
 
-## Usage: WIP
-
 This package contains the foundation styles of the LegoCSS library, including:
 - Colors
 - Font
 - Type-scale
 - Typography
 
-## License
 
-MIT © [morgantaylor](https://github.com/morgantaylor)
+## Usage: WIP
+
+To use these styles in your own css.
+
+`.scss` file:
+```bash
+@import "~@legocss/foundation";
+
+.test {
+	color: var(--color-primary);
+	font-size: var(--type-scale-headline);
+}
+```
+
 
 ## Development
 
@@ -31,3 +41,8 @@ To compile css to the dist folder - product:
 ```bash
 npm run package
 ```
+
+
+## License
+
+MIT © [morgantaylor](https://github.com/morgantaylor)

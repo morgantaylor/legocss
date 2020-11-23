@@ -8,25 +8,22 @@
 npm i --save @legocss/utilities
 ```
 
+
 ## Usage: WIP
 
-To use the mixins in your SCSS import the file inside of you scss file
+To use these mixins in your own css.
 
+1. Make sure that you have `node-sass` installed
+2. Import the mixin file in your `.scss` file:
 ```bash
 @import '@legocss/utilities/mixins.scss';
+@import '@legocss/utilities/breakpoints.scss';
+
+.test {
+	@include text(var(--type-scale-headline), 1.25, 600, var(--color-primary))
+}
 ```
 
-## Development
-
-To compile css to the dist folder - dev:
-```bash
-npm run dev
-```
-
-To compile css to the dist folder - product:
-```bash
-npm run package
-```
 
 ## License
 

@@ -8,11 +8,20 @@
 npm i --save @legocss/css-reset
 ```
 
+This package contains:
+- Normalize
+- Lego Reset
+
+
 ## Usage: WIP
 
-This package contains:
-- Normalize.css
-- Lego Reset
+To use these styles in your own css.
+
+`.scss` file:
+```bash
+@import "~@legocss/css-reset";
+```
+
 
 ## Development
 
@@ -25,6 +34,7 @@ To compile css to the dist folder - product:
 ```bash
 npm run package
 ```
+
 
 ## License
 

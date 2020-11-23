@@ -1,13 +1,13 @@
 // ==================
 // Typography 
 // ==================
-@import 'node_modules/@legocss/utilities/mixins.scss';
+@import 'node_modules/@legocss/utilities/_mixins.scss';
 
 //// Typography /////
 
 // Base Size 16px = 1em
-body {
-  @include text(var(--type-scale-1), 1.5, 400, var(--color-neutral-900));
+html, body {
+  @include text(var(--type-scale-1), 1, 400, var(--color-neutral-900));
   font-family: var(--font-arial);
 }
 
@@ -93,7 +93,6 @@ h6 { @include font-size($h6-font-sizes); }
 p, ul, ol, blockquote { @include font-size($p-font-sizes); }
 
 p {
-  line-height: 1.5;
   font-family: var(--font-arial);
   margin: 1rem 0 1.25rem 0;
 }

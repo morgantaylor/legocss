@@ -1,7 +1,7 @@
 {
   "name": "@legocss/foundation",
   "version": "0.0.7",
-  "description": "LegoCSS foundation package",
+  "description": "LegoCSS Foundation package",
   "author": "morgantaylor",
   "license": "MIT",
   "repository": {
@@ -13,13 +13,14 @@
     "/dist"
   ],
   "main": "dist/index.css",
+  "style": "dist/index.css",
   "scripts": {
     "dev": "node-sass --output-style expanded --source-map-embed src/index.scss dist/index.css --watch && postcss -u autoprefixer -r dist/index.css --watch",
     "package": "node-sass --output-style compressed --source-map-embed src/index.scss dist/index.css && postcss -u autoprefixer -r dist/index.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "@legocss/utilities": "^0.0.4",
+    "@legocss/utilities": "0.0.5",
     "autoprefixer": "^10.0.2",
     "postcss": "^8.1.9",
     "postcss-cli": "^8.3.0",

@@ -1,7 +1,7 @@
 {
   "name": "@legocss/utilities",
-  "version": "0.0.4",
-  "description": "The package for mixins, etc for LegoCSS",
+  "version": "0.0.5",
+  "description": "LegoCSS Utility package for mixins and breakpoints",
   "main": "index.scss",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
