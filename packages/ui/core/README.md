@@ -28,6 +28,19 @@ To use the core styles in your own css.
 }
 ```
 
+If you want to use the mixins and breakpoints in your own `.scss` files:
+
+```bash
+@import "~@legocss/core/dist/_mixins.scss";
+@import "~@legocss/core/dist/_breakpoints.scss";
+
+.test-custom {
+  @media #{$phone} {
+  	@include text(var(--type-scale-headline), 1.25, 600, var(--color-primary));
+  	color: var(--color-danger)
+  }
+}
+```
 
 ## Development
 
